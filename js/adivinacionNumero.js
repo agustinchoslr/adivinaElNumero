@@ -16,5 +16,11 @@ if (segundoIntentoVar == numIncognito || numIngresado == numIncognito) {
     document.write(`<br>SI, FELICITACIONES 🥳 EL NÚMERO ERA ${numIncognito}`)
 }
 else {
-    document.write("<br>No era ese, perdiste. Intenta de nuevo")
+    document.write("<br>No era ese, perdiste. <button id='reload'>Intenta de nuevo</button> ")
 };
+
+const reload = document.getElementById('reload');
+
+reload.addEventListener('click', _ => { // el _ es para indicar la ausencia de parametros
+    location.reload();
+});
